@@ -44,7 +44,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: native Python dataclasses for the OME data model
+  summary: native python dataclasses for the OME data model
   doc_url: https://ome-types.readthedocs.io/en/latest/
   dev_url: https://github.com/tlambert03/ome-types
 
