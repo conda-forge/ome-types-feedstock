@@ -1,5 +1,5 @@
 {% set name = "ome-types" %}
-{% set version = "0.2.5" %}
+{% set version = "0.2.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: bf293916a37927e4972476e22aa9b0264e958c487a2a4e471eece4f8d871a05e
+  sha256: f5f30488285da4521d785b373ee7aafca58e86edb690763825805189fed113b8
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -24,7 +24,7 @@ requirements:
     - autoflake
     - numpydoc
     - xmlschema ==1.4.1
-    
+
   run:
     - python >=3.7
     - pydantic
@@ -44,7 +44,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'native Python dataclasses for the OME data model'
+  summary: native python dataclasses for the OME data model
   doc_url: https://ome-types.readthedocs.io/en/latest/
   dev_url: https://github.com/tlambert03/ome-types
 
