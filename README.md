@@ -7,7 +7,7 @@ Package license: MIT
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/ome-types-feedstock/blob/master/LICENSE.txt)
 
-Summary: native Python dataclasses for the OME data model
+Summary: native python dataclasses for the OME data model
 
 Development: https://github.com/tlambert03/ome-types
 
