@@ -1,43 +1,47 @@
 {% set name = "ome-types" %}
-{% set version = "0.2.9" %}
+{% set version = "0.3.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 203f63e93df67707adb506816faf04965fe9f65005933f74e981dd54e0f85637
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ome_types-{{ version }}.tar.gz
+  sha256: e5fbb5cf29cb4c47015a3322eb8e7587dd439d88714100059108f125c196df29
 
 build:
   noarch: python
-  number: 0
   script: {{ PYTHON }} -m pip install . -vv
+  number: 0
 
 requirements:
   host:
-    - pip
-    - python >=3.7
-    - setuptools_scm
-    - isort >=5.0
-    - black
     - autoflake
+    - black
+    - isort >=5.0
     - numpydoc
-    - xmlschema ==1.4.1
-
-  run:
-    - python >=3.7
+    - pip
     - pydantic
+    - python >=3.7
+    - setuptools >=42
+    - setuptools-scm
+    - wheel
     - xmlschema ==1.4.1
-    - Pint >=0.15
+  run:
+    - lxml >=4.8.0
+    - pint >=0.15
+    - pydantic >=1.0
+    - python >=3.7
+    - xmlschema >=1.4.1,<2
 
 test:
   imports:
     - ome_types
+  commands:
+    - pip list
+    - pip check
   requires:
     - pip
-  commands:
-    - pip check
 
 about:
   home: https://github.com/tlambert03/ome-types
