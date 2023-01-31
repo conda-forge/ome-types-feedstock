@@ -16,17 +16,10 @@ build:
 
 requirements:
   host:
-    - autoflake
-    - black
-    - isort >=5.0
-    - numpydoc
     - pip
-    - pydantic
     - python >=3.7
-    - setuptools >=42
-    - setuptools-scm
-    - wheel
-    - xmlschema ==1.4.1
+    - hatchling
+    - hatch-vcs
   run:
     - lxml >=4.8.0
     - pint >=0.15
