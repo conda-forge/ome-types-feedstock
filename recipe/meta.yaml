@@ -1,5 +1,5 @@
 {% set name = "ome-types" %}
-{% set version = "0.3.3" %}
+{% set version = "0.3.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ome_types-{{ version }}.tar.gz
-  sha256: 434703bbd4079f7c8227fb074988c11a2d5e8cdbfbfc18675e45540eea6285e0
+  sha256: 971139bf5b85d6492937f2fee75c03e05bd20043ac01e78e3b00991cb41cfa7b
 
 build:
   noarch: python
