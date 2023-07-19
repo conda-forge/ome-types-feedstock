@@ -20,17 +20,18 @@ requirements:
     - python >=3.7
     - hatchling
     - hatch-vcs
+    - pydantic >=1.9.0
+    - xsdata >= 23.6  # includes all the cli extras
     - black
-    - isort >=5.0
-    - xmlschema >=1.4.1,<2
-    - autoflake
-    - numpydoc
+    - ruff
   run:
+    - python >=3.7
+    - pydantic >=1.9.0
+    - xsdata >= 23.5
+    - importlib_metadata # [py<38]
+    # extras
     - lxml >=4.8.0
     - pint >=0.15
-    - pydantic >=1.0
-    - python >=3.7
-    - xmlschema >=1.4.1,<2
 
 test:
   imports:
