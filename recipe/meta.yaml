@@ -1,6 +1,7 @@
 {% set name = "ome-types" %}
 {% set version = "0.3.4" %}
 
+
 package:
   name: {{ name|lower }}
   version: {{ version }}
@@ -9,6 +10,7 @@ source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ome_types-{{ version }}.tar.gz
   sha256: 971139bf5b85d6492937f2fee75c03e05bd20043ac01e78e3b00991cb41cfa7b
 
+
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
@@ -16,18 +18,21 @@ build:
 
 requirements:
   host:
-    - autoflake
-    - black
-    - isort >=5.0
-    - numpydoc
     - pip
     - pydantic <2.0
     - python >=3.7
-    - setuptools >=42
-    - setuptools-scm
-    - wheel
-    - xmlschema ==1.4.1
+    - hatchling
+    - hatch-vcs
+    - pydantic >=1.9.0
+    - xsdata >=23.6  # includes all the cli extras
+    - black
+    - ruff
   run:
+    - python >=3.7
+    - pydantic >=1.9.0
+    - xsdata >=23.5
+    - importlib_metadata
+    # extras
     - lxml >=4.8.0
     - pint >=0.15
     - pydantic <2.0
