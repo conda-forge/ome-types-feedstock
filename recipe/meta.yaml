@@ -25,9 +25,8 @@ requirements:
     - pip
     - pydantic <2.0
     - python >=3.7
-    - setuptools >=42
-    - setuptools-scm
-    - wheel
+    - hatchling
+    - hatch-vcs
     - xmlschema ==1.4.1
   run:
     - lxml >=4.8.0
