@@ -29,7 +29,7 @@ requirements:
     - python >=3.7
     - pydantic >=1.9.0
     - pydantic-compat >=0.1.0
-    - xsdata >=23.5
+    - xsdata >=23.6,<25
     - importlib_metadata
     # extras
     - lxml >=4.8.0
