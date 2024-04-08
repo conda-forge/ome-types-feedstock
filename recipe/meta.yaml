@@ -28,7 +28,7 @@ requirements:
     - python >=3.8
     - pydantic >=1.9.0
     - pydantic-compat >=0.1.0
-    - xsdata >=23.6,<25  # includes all the cli extras
+    - xsdata >=23.6,<24.4  # includes all the cli extras
     # extras
     - lxml >=4.8.0
     - pint >=0.15
