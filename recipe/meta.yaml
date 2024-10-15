@@ -17,7 +17,7 @@ build:
 requirements:
   host:
     - python >=3.7,<3.12
-    - autoflake ==2.0.2
+    - autoflake
     - black ==23.3.0
     - hatch-vcs
     - hatchling
