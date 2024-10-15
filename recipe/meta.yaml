@@ -30,7 +30,7 @@ requirements:
     - lxml >=4.8.0
     - pint >=0.15
     - pydantic >=1.9,<2.0
-    - xmlschema >=1.4.1,<2
+    - xmlschema >=2.0.0,<3
 
 test:
   imports:
