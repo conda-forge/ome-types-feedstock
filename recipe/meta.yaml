@@ -26,7 +26,7 @@ requirements:
     - ruff ==0.3.0
   run:
     - python >=3.8
-    - pydantic >=1.9.0
+    - pydantic >=1.10.16,!=2.0,!=2.1,!=2.2,!=2.3
     - pydantic-compat >=0.1.0
     - xsdata >=23.6,<24.4  # includes all the cli extras
     # extras
