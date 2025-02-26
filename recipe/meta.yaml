@@ -20,14 +20,14 @@ requirements:
     - python {{ python_min }}
     - hatchling
     - hatch-vcs
-    - pydantic-compat >=0.1.0
-    - pydantic >=1.9.0
+    - pydantic >=2.4
+    - pydantic_extra_types
     - xsdata ==24.2.1
     - ruff ==0.3.0
   run:
     - python >={{ python_min }}
-    - pydantic >=1.10.16,!=2.0,!=2.1,!=2.2,!=2.3
-    - pydantic-compat >=0.1.0
+    - pydantic >=2.4
+    - pydantic_extra_types
     - xsdata >=23.6,<24.4  # includes all the cli extras
     # extras
     - lxml >=4.8.0
