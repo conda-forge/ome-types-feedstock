@@ -21,13 +21,13 @@ requirements:
     - hatchling
     - hatch-vcs
     - pydantic >=2.4
-    - pydantic_extra_types
+    - pydantic-extra-types
     - xsdata ==24.2.1
     - ruff ==0.3.0
   run:
     - python >={{ python_min }}
     - pydantic >=2.4
-    - pydantic_extra_types
+    - pydantic-extra-types
     - xsdata >=23.6,<24.4  # includes all the cli extras
     # extras
     - lxml >=4.8.0
