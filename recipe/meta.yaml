@@ -1,5 +1,5 @@
 {% set name = "ome-types" %}
-{% set version = "0.5.3" %}
+{% set version = "0.6.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/ome_types-{{ version }}.tar.gz
-  sha256: f19a7e6021f798117d342a52629ce4137ab9a9bc45b7707abd7f26191a3899be
+  sha256: 2f0aa8092170f5cce2711b2d8f1139debe5fc5bbdcabe95e5db745da4fbf6062
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -20,14 +20,14 @@ requirements:
     - python {{ python_min }}
     - hatchling
     - hatch-vcs
-    - pydantic-compat >=0.1.0
-    - pydantic >=1.9.0
+    - pydantic >=2.4
+    - pydantic-extra-types
     - xsdata ==24.2.1
     - ruff ==0.3.0
   run:
     - python >={{ python_min }}
-    - pydantic >=1.10.16,!=2.0,!=2.1,!=2.2,!=2.3
-    - pydantic-compat >=0.1.0
+    - pydantic >=2.4
+    - pydantic-extra-types
     - xsdata >=23.6,<24.4  # includes all the cli extras
     # extras
     - lxml >=4.8.0
