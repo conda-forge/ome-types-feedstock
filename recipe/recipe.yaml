@@ -1,0 +1,62 @@
+schema_version: 1
+
+context:
+  name: ome-types
+  version: 0.6.0
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/ome_types-${{ version }}.tar.gz
+  sha256: 2f0aa8092170f5cce2711b2d8f1139debe5fc5bbdcabe95e5db745da4fbf6062
+
+build:
+  number: 1
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv
+
+requirements:
+  host:
+    - pip
+    - python ${{ python_min }}.*
+    - hatchling
+    - hatch-vcs
+    - pydantic >=2.4
+    - pydantic-extra-types
+    - xsdata ==24.2.1
+    - ruff ==0.3.0
+  run:
+    - python >=${{ python_min }}
+    - pydantic >=2.4
+    - pydantic-extra-types
+    - xsdata >=23.6,<24.4  # includes all the cli extras
+    # extras
+    - lxml >=4.8.0
+    - pint >=0.15
+
+tests:
+  - python:
+      imports:
+        - ome_types
+      python_version: ${{ python_min }}.*
+  - requirements:
+      run:
+        - pip
+        - python ${{ python_min }}.*
+    script:
+      - pip list
+      - pip check
+
+about:
+  license: MIT
+  license_file: LICENSE
+  summary: native python dataclasses for the OME data model
+  homepage: https://github.com/tlambert03/ome-types
+  repository: https://github.com/tlambert03/ome-types
+  documentation: https://ome-types.readthedocs.io/en/latest/
+
+extra:
+  recipe-maintainers:
+    - tlambert03
