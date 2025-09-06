@@ -26,7 +26,7 @@ requirements:
     - pydantic >=2.4
     - pydantic-extra-types
     - xsdata ==24.2.1
-    - ruff ==0.3.0
+    - ruff
   run:
     - python >=${{ python_min }}
     - pydantic >=2.4
