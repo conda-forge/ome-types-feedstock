@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: ome-types
-  version: 0.6.1
+  version: "0.6.2"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/ome_types-${{ version }}.tar.gz
-  sha256: 49e7a79ac90f8e4c33392f285491cb2577d41f2583bb879307c4f5ba9436e721
+  sha256: 8711be3be9514423eab71ef32aa63cecf76e231b8ee9a5c186f59c050623ab45
 
 build:
   number: 0
