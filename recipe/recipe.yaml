@@ -24,6 +24,8 @@ requirements:
     - hatchling
     - hatch-vcs
     - pip
+    - pydantic >=2.4.0
+    - pydantic-extra-types >=2.0.0
     - ruff ==0.13.2
     - xsdata >=24.7
   run:
