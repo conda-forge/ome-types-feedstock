@@ -24,6 +24,8 @@ requirements:
     - hatchling
     - hatch-vcs
     - pip
+    - ruff ==0.13.2
+    - xsdata >=24.7
   run:
     - python >=${{ python_min }}
     - pydantic >=2.4.0
